@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<div class="celbration" style="margin-left: 0px; display: flex;flex-direction: column;text-align: center; justify-content: center;margin-top: 0px ;display:none;">
+    <div class="trophy">
+        <img src="Group 5.png" alt="">
+        <img src="Vector.png" alt="" >
+        <img src="Group 5.png" alt="">
+
+        <div class="hurray" style=" display: flex;
+        font-size: 50px;
+        font-family: 'Roboto', sans-serif;
+        color: white ;
+        ">
+            <h1>HURRAY!!!</h1>
+            </div>   
+
+
+    </div>
+    
+
+     
+</div>
+
+
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="gamename">
+                STONE<br>
+                PAPER<br>
+                SCISSORS
+            </div>
+            <div class="gamescore">
+                 <div class="userscore" value="0">USER SCORE
+                    <span id="userSCR" style="background-color: white; font-size: 50px; 
+                    display: flex;padding-top: 20px;">
+                        0
+                    </span>
+                 </div>
+                <div class="computerscore">COMPUTER SCORE
+                    <span id="compSCR" style="background-color: white; font-size: 50px;">
+                        0
+                    </span>
+                </div>            
+            </div>
+        </div>
+        
+    </div>    
+    <div class="main-div-input">
+    <div class="hands">
+        <div id="stone" class="choice">
+            <button class="input" style="background-color: white; height: 80px;
+            width: 80px;border-radius: 100px;border: none;"onclick="pickUserHand('rock')"><img src="icons8-fist-67 1 (1).png " 
+                style="background-color: white;  "</button>
+        </div>
+        <div id="paper" class="choice">
+            <button class="input" style="background-color: white; height: 80px;
+            width: 80px;border-radius: 100px;border: none;" onclick="pickUserHand('paper')"><img src="icons8-hand-64 1.png" 
+                style="background-color: white; "</button>
+        </div>
+        <div id="scissor" class="choice">
+            <button class="input"style="background-color: white; height: 80px;
+            width: 80px;border-radius: 100px;border: none;" onclick="pickUserHand('scissors')"><img src="17911 1.png"
+             style="background-color: white; 
+            "</button>
+        </div>        
+</div>
+<div class="contest" >       
+    <div class="userhand" >
+        <h1>YOU PICKED</h1>
+        <div class="handImageContainer" style="height: 150px;width: 150px; background-color: white; border-radius: 100px;">
+          <img id="userPickImage" src="icons8-hand-64 1.png" style="margin-top: 40px; height:50px;width:60px;background-color: white; ">
+        </div>
+    </div>
+    <div class="referee"> 
+        <div class="decision"><h1> YOU WIN! </h1></div>
+        <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+    </div>
+    <div class="computerhand" >
+        <h1>THE HOUSE PICKED</h1>
+        <div class="handImageContainer"style=" height: 150px;width: 150px; background-color: white; border-radius: 100px;">
+          <img id="computerPickImage" src="icons8-hand-64 1.png" style="margin-top: 40px; height:50px;width:60px;background-color: white; "/> 
+        </div>   
+    </div>    
+     
+  </div> 
+<div class="modal">
+  <div class="modal__container">
+    <header class="modal__header">
+      <h2 class="modal__heading">GAME RULES</h2>
+      <button class="close-btn" style="font-weight: 500; background-color: red;color: white;border-radius: 100px;width: 20px;height: 20px;">
+       X
+      </button>
+    </header>
+    <div style="padding: 10px; height:200px;width:560px;background-color:#004429;color: white; padding-top: 30px; 
+    font-family:'Roboto', sans-serif;line-height: 19px ;" class="rules-img">
+      <img src="Rectangle 5.png"> Rock beats scissors, scissors beat paper, and paper beats rock.
+      <br>
+      <img src="Rectangle 5.png"> Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+      <br>
+      <img src="Rectangle 5.png"> Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+      <br>
+      <img src="Rectangle 5.png"> If both players lay down the same hand, each player lays down another hand
+   
+      
+    </div>
+    
+  </div>
+  
+</div>
+
+<div style=" height: 150px;width: 150px;  margin-top: 350px; display: flex;flex-direction: row;margin-right:10px;">
+    <button class="rules-btn" tabindex="1" style="height: 40px;width: 120px;border: 3px solid white;font-family:'Roboto', sans-serif ;color: white;font-size: 20px;border-radius: 10px;">Rules</button>
+    
+<button class="next-btn" tabindex="1" onclick="celebration()" style=" margin-right: 5px; display: none; height: 40px;width: 120px;border: 3px solid white;font-family:'Roboto', sans-serif ;color: white;font-size: 20px;border-radius: 10px;">Next</button>
+</div>
+
+</div>
+
+
+
+</body>
+
+<script src="script.js"></script>
+</html>
